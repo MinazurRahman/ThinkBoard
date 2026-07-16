@@ -64,7 +64,7 @@ const CreatePage = () => {
                           onChange={(e) => setContent(e.target.value)}
                         />
                       </div>
-                      <div className="cardaction justify-end">
+                      <div className="card-actions justify-end">
                         <button type="submit" className="btn btn-primary" disabled={isLoading}>
                           {isLoading ? 'Creating...' : 'Create Note'}
                         </button>
