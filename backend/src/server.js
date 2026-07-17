@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
+ 
 
 import notesRoutes from "./routes/notesRoutes.js";
 import { connectDB } from "./config/db.js";
@@ -10,14 +12,18 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const __dirname = path.resolve();
 
 
 //middlewares
-app.use(cors(
-  {
-    origin: "http://localhost:5173", // Allow requests from any origin
-  }
-)); // Middleware to enable Cross-Origin Resource Sharing (CORS) for all routes
+if(process.env.NODE_ENV === "development"){
+  app.use(cors(
+    {
+      origin: "http://localhost:5173", // Allow requests from any origin
+    }
+  ));
+};
+// Middleware to enable Cross-Origin Resource Sharing (CORS) for all routes
 
 app.use(express.json());  // Middleware to parse incoming JSON requests
 app.use(rateLimiter); // Middleware to apply rate limiting to all routes  
@@ -29,6 +35,11 @@ app.use(rateLimiter); // Middleware to apply rate limiting to all routes
 // })
 
 app.use("/api/notes", notesRoutes);
+
+if(process.env.NODE_ENV === "production"){
+  app.use(express.static(path.join(__dirname,"../frontend/dist")));
+  // SPA fallback route removed - wildcards not supported in Express 5
+};
 
 // Start the server after connecting to the database
 connectDB().then(() => {
