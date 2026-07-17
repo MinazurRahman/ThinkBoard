@@ -6,6 +6,8 @@
 ![Deployment](https://img.shields.io/badge/Deployment-Render-46E3B7)
 ![License](https://img.shields.io/badge/License-ISC-blue)
 
+🔗 **[Live Application](https://thinkboard-4krh.onrender.com/)**
+
 ---
 
 ## 🎯 Overview
@@ -74,15 +76,20 @@ ThinkBoard/
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### Prerequisites
+### 🌐 Try the Live Application
+Visit the deployed application: **[https://thinkboard-4krh.onrender.com/](https://thinkboard-4krh.onrender.com/)**
+
+### 💻 Run Locally
+
+#### Prerequisites
 - Node.js (v14 or higher)
 - npm or yarn package manager
 - MongoDB account and connection string
 - Upstash Redis account (for rate limiting)
 
-### Installation
+#### Installation
 
 1. **Clone the repository**
    ```bash
@@ -102,7 +109,7 @@ ThinkBoard/
    npm install
    ```
 
-### Environment Configuration
+#### Environment Configuration
 
 Create a `.env` file in the `backend` directory with the following variables:
 
@@ -122,7 +129,7 @@ NODE_ENV=development
 FRONTEND_URL=http://localhost:5173
 ```
 
-### Running Locally
+#### Running Locally
 
 1. **Start the Backend**
    ```bash
@@ -155,6 +162,9 @@ FRONTEND_URL=http://localhost:5173
 
 ThinkBoard is deployed on **Render**, a modern cloud platform for building and deploying web applications.
 
+### Live URL
+🔗 **[https://thinkboard-4krh.onrender.com/](https://thinkboard-4krh.onrender.com/)**
+
 ### Deployment Steps on Render
 
 1. **Push your code to GitHub** (already done ✓)
@@ -174,9 +184,6 @@ ThinkBoard is deployed on **Render**, a modern cloud platform for building and d
 5. **Deploy**
    - Render will automatically deploy and provide a live URL
 
-### Live URL
-Visit your deployed application at your Render URL to start using ThinkBoard!
-
 ---
 
 ## 📚 API Documentation
@@ -185,7 +192,7 @@ The backend provides RESTful API endpoints for note management. You can find the
 
 ### Base URL
 ```
-http://localhost:5000/api
+https://thinkboard-4krh.onrender.com/api
 ```
 
 ### Available Endpoints
@@ -270,6 +277,7 @@ This project is licensed under the ISC License - see the LICENSE file for detail
 **Minazur Rahman**
 - GitHub: [@MinazurRahman](https://github.com/MinazurRahman)
 - Repository: [ThinkBoard](https://github.com/MinazurRahman/ThinkBoard)
+- Live Application: [https://thinkboard-4krh.onrender.com/](https://thinkboard-4krh.onrender.com/)
 
 ---
 
@@ -294,6 +302,8 @@ For support, please open an issue on the [GitHub Issues](https://github.com/Mina
 <div align="center">
 
 **Made with ❤️ by Minazur Rahman**
+
+🔗 **[Visit ThinkBoard](https://thinkboard-4krh.onrender.com/)** | ⭐ **[GitHub Repository](https://github.com/MinazurRahman/ThinkBoard)**
 
 ⭐ If you find this project helpful, please consider giving it a star!
 
